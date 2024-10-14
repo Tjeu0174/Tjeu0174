@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Bar</title>
+  <style>
+    #progressBarContainer {
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 25px;
+      height: 30px;
+      margin: 50px auto;
+      position: relative;
+    }
+    #progressBar {
+      width: 0%;
+      height: 100%;
+      background-color: #4caf50;
+      border-radius: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progressBarContainer">
+    <div id="progressBar"></div>
+  </div>
+
+  <!-- Voeg Velocity.js toe -->
+  <script src="https://cdn.jsdelivr.net/npm/velocity-animate@2.0/velocity.min.js"></script>
+
+  <script>
+    // De laadbalk animeren om over 20 seconden volledig te vullen
+    Velocity(document.getElementById("progressBar"), 
+    { width: "100%" }, 
+    { duration: 20000 }); // 20000 ms = 20 seconden
+  </script>
+
+</body>
+</html>
